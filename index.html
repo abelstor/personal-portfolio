@@ -18,7 +18,7 @@
     <header class="header">
         <div class="header__container">
             <div class="header__brand">
-                <a class="header__logo" href="#home">@belstor</a>
+                <a class="header__logo header__nav-link header__nav-link--active" href="#home">@belstor</a>
             </div>
             <nav id="navbar" class="header__nav">
                 <ul class="header__nav-list">
@@ -33,6 +33,7 @@
                     </li>
                 </ul>
             </nav>
+            <div class="menu">☰</div>
         </div>
     </header>
 
@@ -172,6 +173,60 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Update active nav link
+                    document.querySelectorAll('.header__nav-link').forEach(link => {
+                        link.classList.remove('header__nav-link--active');
+                    });
+                    this.classList.add('header__nav-link--active');
+
+                    // Scroll to element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.header__nav-link').forEach(link => {
+                        link.classList.remove('header__nav-link--active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('header__nav-link--active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Simple menu toggle for mobile
+        document.querySelector('.menu').addEventListener('click', () => {
+            const nav = document.querySelector('.header__nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
 </body>
 
 </html>
