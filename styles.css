@@ -418,3 +418,39 @@ main .section:nth-of-type(4) h2 {
   font-size: 1rem;
   opacity: 0.8;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav-list {
+    gap: 0.75rem;
+  }
+
+  .header__container {
+    padding: 1rem;
+  }
+
+  .home__title {
+    font-size: 2.5rem;
+  }
+
+  .home__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
