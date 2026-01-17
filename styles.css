@@ -160,7 +160,9 @@ ul {
   font-weight: 700;
   font-size: 1.2rem;
   font-family: var(--secondary-font);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   max-width: fit-content;
 }
 
@@ -259,7 +261,9 @@ main .section:nth-of-type(3) h2 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .project-card:hover {
@@ -313,4 +317,79 @@ main .section:nth-of-type(3) h2 {
 
 .project-card__link:hover {
   text-decoration: underline;
+}
+
+/* CONTACT SECTION */
+
+main .section:nth-of-type(4) {
+  background-color: var(--ocre-arenoso);
+  color: var(--terracota-principal);
+}
+main .section:nth-of-type(4) h2 {
+  color: var(--chocolate-profundo);
+  font-family: var(--secondary-font);
+}
+
+.contact__form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--secondary-font);
+  color: var(--chocolate-profundo);
+}
+
+.form-group__input,
+.form-group__textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--arena-clara);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group__input:focus,
+.form-group__textarea:focus {
+  outline: none;
+  border-color: var(--beige-crema);
+}
+
+.form-group__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button {
+  background-color: var(--chocolate-profundo);
+  color: var(--terracota-suave);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--beige-crema);
+}
+
+.button--full-width {
+  max-width: max-content;
+  display: flex;
+  justify-self: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: var(--secondary-font);
 }
