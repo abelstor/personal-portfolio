@@ -204,6 +204,7 @@ main .section:nth-of-type(2) h2 {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  padding: 0 7rem;
 }
 
 .about__image-container {
@@ -443,6 +444,7 @@ main .section:nth-of-type(4) h2 {
 
   .about__content {
     grid-template-columns: 1fr;
+    padding: 0;
     gap: 2rem;
   }
 
@@ -452,5 +454,18 @@ main .section:nth-of-type(4) h2 {
 
   .projects__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Burguer Menu (placeholder) */
+.menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    color: var(--ambar-dorado);
+    font-size: 1.3rem;
+    display: block;
   }
 }
