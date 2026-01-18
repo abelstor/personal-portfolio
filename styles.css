@@ -47,7 +47,7 @@ ul {
 .header {
   background-color: var(--tierra-oscura);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -114,24 +114,21 @@ ul {
 
 /* HOME SECTION */
 .home {
-  padding: 6rem 2rem;
   background: linear-gradient(
     135deg,
     var(--ambar-dorado) 0%,
     var(--chocolate-profundo) 140%
   );
   color: var(--arena-clara);
-  text-align: center;
 }
 
 .home__container {
-  max-width: 800px;
-  margin: 0 auto;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100dvh - 190px);
+  text-align: center;
 }
 
 .home__title {
@@ -420,6 +417,31 @@ main .section:nth-of-type(4) h2 {
 .footer__text {
   font-size: 1rem;
   opacity: 0.8;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.7rem;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: last baseline;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--ocre-arenoso);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.footer__social-link:hover {
+  background-color: var(--beige-crema);
+}
+
+ion-icon {
+  font-size: 28px;
+  color: var(--tierra-oscura);
 }
 
 /* Responsive Design */
