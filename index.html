@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
+    <link rel="icon" type="image" href="assets/abel.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,11 +41,13 @@
     <!-- MAIN CONTENT -->
     <main class="main">
         <!-- HOME SECTION -->
-        <section id="home" class="home">
-            <div class="home__container">
-                <h1 class="home__title">Creative developer <br />& AI enthusiast</h1>
-                <p class="home__subtitle">Building digital experiences that matter</p>
-                <a href="#projects" class="home__button">View My Projects</a>
+        <section id="home" class="section">
+            <div class="section__container">
+                <div class="home__content">
+                    <h1 class="home__title">Creative developer <br />& AI enthusiast</h1>
+                    <p class="home__subtitle">Building digital experiences that matter</p>
+                    <a href="#projects" class="home__button">View My Projects</a>
+                </div>
             </div>
         </section>
 
@@ -166,14 +169,33 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__content">
-                <a href="#about" class="header__logo">@belstor</a>
-                <p class="footer__text">© 2026 @belstor. All rights reserved.</p>
-            </div>
+        <div class="footer__content">
+            <p class="footer__text">© 2026 @belstor. All rights reserved.</p>
+            <ul class="footer__social">
+                <li class="footer__social-link">
+                    <a href="https://github.com/abelstor" target="_blank" class="footer__icon">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </li>
+                <li class="footer__social-link">
+                    <a href="https://www.instagram.com/abelstor/" target="_blank" class="footer__icon">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li class="footer__social-link">
+                    <a href="https://www.linkedin.com/in/abelstor" target="_blank" class="footer__icon">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
 
+    <!-- Import Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- JavaScript code bonus -->
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -193,7 +215,7 @@
 
                     // Scroll to element
                     window.scrollTo({
-                        top: targetElement.offsetTop - 20,
+                        top: targetElement.offsetTop,
                         behavior: 'smooth'
                     });
                 }
