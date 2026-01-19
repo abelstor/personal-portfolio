@@ -112,22 +112,43 @@ ul {
   width: 100%;
 }
 
+/* SECTIONS */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section__container {
+  min-height: 100dvh;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
 /* HOME SECTION */
-.home {
+main .section:nth-child(1) {
   background: linear-gradient(
     135deg,
     var(--ambar-dorado) 0%,
     var(--chocolate-profundo) 140%
   );
-  color: var(--arena-clara);
+  padding-top: 2rem;
 }
 
-.home__container {
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+main .section:nth-child(1) h1 {
+  color: var(--beige-crema);
+  font-family: var(--primary-font);
+}
+
+.home__content {
   text-align: center;
 }
 
@@ -135,6 +156,7 @@ ul {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   font-weight: 800;
+  text-align: center;
 }
 
 .home__subtitle {
@@ -168,24 +190,7 @@ ul {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* SECTIONS */
-.section {
-  padding: 4rem 2rem;
-}
-
-.section__container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section__title {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
 /* ABOUT SECTION */
-
 main .section:nth-of-type(2) {
   background-color: var(--beige-crema);
   color: var(--terracota-principal);
@@ -210,11 +215,9 @@ main .section:nth-of-type(2) h2 {
 }
 
 .about__image {
-  width: 100%;
+  width: 70%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  width: 340px;
-  height: 340px;
 }
 
 .about__text {
@@ -238,7 +241,6 @@ main .section:nth-of-type(2) h2 {
 }
 
 /* PROJECTS SECTION */
-
 main .section:nth-of-type(3) {
   background-color: var(--chocolate-tostado);
   color: var(--terracota-principal);
@@ -246,6 +248,7 @@ main .section:nth-of-type(3) {
 main .section:nth-of-type(3) h2 {
   color: var(--beige-crema);
   font-family: var(--secondary-font);
+  padding: 3rem 0;
 }
 
 .projects__grid {
@@ -320,7 +323,6 @@ main .section:nth-of-type(3) h2 {
 }
 
 /* CONTACT SECTION */
-
 main .section:nth-of-type(4) {
   background-color: var(--ocre-arenoso);
   color: var(--terracota-principal);
@@ -331,6 +333,7 @@ main .section:nth-of-type(4) h2 {
 }
 
 .contact__form {
+  width: 400px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -470,6 +473,11 @@ ion-icon {
     grid-template-columns: 1fr;
     padding: 0;
     gap: 2rem;
+  }
+
+  .contact__form {
+    width: 100%;
+    padding: 0 1rem;
   }
 
   .section {
